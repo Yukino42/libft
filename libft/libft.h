@@ -6,7 +6,7 @@
 /*   By: rlemarch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 09:33:57 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/11/28 17:18:05 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/11/30 16:25:06 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *s1, const char *s2);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *str);
 
 #endif
