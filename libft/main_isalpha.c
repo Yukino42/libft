@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:57:27 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:03 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/01 08:51:32 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/01 09:34:51 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-int	ft_atoi(const char *str)
+int	main(void)
 {
-	int		res;
-	int		n;
-	int		o;
+	int		c;
+	int		d;
+	int		e;
 
-	n = 0;
-	res = 0;
-	o = 0;
-	while (str[n] < '!')
-		n++;
-	if (str[n] == '-')
+	c = 0;
+	d = 0;
+	e = 0;
+	printf("\n");
+	while (c <= 255)
 	{
-		o = n;
-		n++;
+		d = isalpha(c);
+		e = ft_isalpha(c);
+		if ((d != 0) | (e != 0))
+			printf("--%c %d %d %d--  ", (char)c, c, d, e);
+		c++;
 	}
-	while ((str[n] >= '0') & (str[n] <= '9'))
-	{
-		res = (res * 10) + (int)(str[n] - 48);
-		n++;
-	}
-	if (str[o] == '-')
-		res = -res;
-	return (res);
+	printf("\n\n");
+	return (0);
 }

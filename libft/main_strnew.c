@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main_strnew.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:57:27 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:03 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/02 09:05:18 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/02 09:23:23 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	main(void)
 {
-	int		res;
-	int		n;
-	int		o;
+	char	*s;
 
-	n = 0;
-	res = 0;
-	o = 0;
-	while (str[n] < '!')
-		n++;
-	if (str[n] == '-')
-	{
-		o = n;
-		n++;
-	}
-	while ((str[n] >= '0') & (str[n] <= '9'))
-	{
-		res = (res * 10) + (int)(str[n] - 48);
-		n++;
-	}
-	if (str[o] == '-')
-		res = -res;
-	return (res);
+	s = NULL;
+	s = ft_strnew(11);
+	write (1, s, 12);
+	return (0);
 }

@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main_strdel.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:57:27 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:03 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/02 09:54:52 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/02 10:28:21 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_atoi(const char *str)
+int	main(void)
 {
-	int		res;
+	char	*s;
 	int		n;
-	int		o;
 
 	n = 0;
-	res = 0;
-	o = 0;
-	while (str[n] < '!')
-		n++;
-	if (str[n] == '-')
+	s = (char*)malloc(11 * sizeof(*s));
+	while (n < 10)
 	{
-		o = n;
+		s[n] = (char)(97 + n);
 		n++;
 	}
-	while ((str[n] >= '0') & (str[n] <= '9'))
-	{
-		res = (res * 10) + (int)(str[n] - 48);
-		n++;
-	}
-	if (str[o] == '-')
-		res = -res;
-	return (res);
+	s[n] = '\0';
+	printf("\n%s\n", s);
+	ft_strdel(&s);
+	if (s == NULL)
+		printf("NULL\n\n");
+	else
+		printf("%s\n\n", s);
+	return (0);
 }

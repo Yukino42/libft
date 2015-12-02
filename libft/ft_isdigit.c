@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:57:27 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:03 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/01 09:38:04 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/01 09:52:46 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_isdigit(int c)
 {
-	int		res;
-	int		n;
-	int		o;
-
-	n = 0;
-	res = 0;
-	o = 0;
-	while (str[n] < '!')
-		n++;
-	if (str[n] == '-')
-	{
-		o = n;
-		n++;
-	}
-	while ((str[n] >= '0') & (str[n] <= '9'))
-	{
-		res = (res * 10) + (int)(str[n] - 48);
-		n++;
-	}
-	if (str[o] == '-')
-		res = -res;
-	return (res);
+	if ((c >= 48) & (c <= 57))
+		return (1);
+	else
+		return (0);
 }
