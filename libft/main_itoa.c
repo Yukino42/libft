@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strsplit.c                                    :+:      :+:    :+:   */
+/*   main_itoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/03 16:45:34 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/04 14:19:02 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/04 14:40:27 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/04 17:25:08 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 
 int	main(void)
 {
-	char	*s1;
-	char	**res;
+	int		n;
+	char	*c;
 
-	res = (char**)malloc(10 * sizeof(**res));
-	s1 = "            vive            le            code          ";
-	res = ft_strsplit(s1, ' ');
-	if (res == NULL)
-		printf("NULL");
-	printf("\n%s\n\n%s\n%s\n%s\n\n", s1, res[0], res[1], res[2]);
+	n = 0;
+	c = (char*)malloc(6 * sizeof(*c));
+	c = ft_itoa(n);
+	printf("\n%d\n%s\n", n, c);
+	printf("%c\n\n", c[6]);
 	return (0);
 }

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strsplit.c                                    :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/03 16:45:34 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/04 14:19:02 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/04 17:58:36 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/04 18:03:34 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void    ft_putendl(char const *s)
 {
-	char	*s1;
-	char	**res;
+	int     i;
 
-	res = (char**)malloc(10 * sizeof(**res));
-	s1 = "            vive            le            code          ";
-	res = ft_strsplit(s1, ' ');
-	if (res == NULL)
-		printf("NULL");
-	printf("\n%s\n\n%s\n%s\n%s\n\n", s1, res[0], res[1], res[2]);
-	return (0);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
 }
