@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   main_putnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 17:58:36 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/05 10:10:07 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/05 09:25:25 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/05 11:30:30 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	ft_putendl(char const *s)
+int	main(void)
 {
+	int		nbr;
 	int		i;
 
+	nbr = 0;
 	i = 0;
-	while (s[i] != '\0')
+	for (i = 0;i < 10;i++)
 	{
-		write(1, &s[i], 1);
-		i++;
+	   	nbr = rand();
+		ft_putnbr(nbr);
+		printf("\n");
 	}
-	write(1, "\n", 1);
+		return (0);
 }

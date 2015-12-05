@@ -6,7 +6,7 @@
 /*   By: rlemarch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 09:33:57 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/04 17:59:28 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/05 09:24:54 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
 
 #endif

@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 17:58:36 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/05 10:10:07 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/05 09:25:07 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/05 11:24:09 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_putnbr(int n)
 {
-	int		i;
+	char			c;
+	unsigned long	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	i = 1;
+	if (n < 0)
+		write(1, "-", 1);
+	if (n == 0)
+		write(1, "0", 1);
+	while (n / i != 0)
+		i = i * 10;
+	while (i > 1)
 	{
-		write(1, &s[i], 1);
-		i++;
+		if (n < 0)
+		{
+			c = (char)(-(((n % i) - (n % (i / 10))) / (i / 10)) + 48);
+			write(1, &c, 1);
+			n = -n;
+		}
+		else
+		{
+			c = (char)((((n % i) - (n % (i / 10))) / (i / 10)) + 48);
+			write(1, &c, 1);
+		}
+		i = i / 10;
 	}
-	write(1, "\n", 1);
 }
