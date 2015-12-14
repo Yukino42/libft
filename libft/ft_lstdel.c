@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_lstnew.c                                      :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/13 11:46:41 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/14 10:48:58 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/14 13:47:19 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/14 14:33:50 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list	*res;
+	t_list	*ptr1;
+	t_list	*ptr2;
 
-	res = ft_lstnew("hello, i'm a data", 18);
-	printf("\n1\n\n");
-	printf("%s\n%ld\n\n", (char*)res->content, res->content_size);
-	free(res->content);
-	printf("2\n\n");
-	free(res);
-	printf("3\n\n");
-	return (0);
+	ptr1 = *alst;
+	while (ptr1->next != NULL)
+	{
+		ptr2 = ptr1;
+		del(ptr1->content, ptr1->content_size);
+		ptr1 = ptr1->next;
+		free(ptr2);
+	}
+	if (ptr1->next == NULL)
+	{
+		del(ptr1->content, ptr1->content_size);
+		free(ptr1);
+	}
+	*alst = NULL;
 }

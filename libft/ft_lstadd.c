@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_lstnew.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/13 11:46:41 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/14 10:48:58 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/14 14:41:09 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/14 15:45:15 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list	*res;
-
-	res = ft_lstnew("hello, i'm a data", 18);
-	printf("\n1\n\n");
-	printf("%s\n%ld\n\n", (char*)res->content, res->content_size);
-	free(res->content);
-	printf("2\n\n");
-	free(res);
-	printf("3\n\n");
-	return (0);
+	new->next = *alst;
+	*alst = new;
 }

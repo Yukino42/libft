@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_lstnew.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/13 11:46:41 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/14 10:48:58 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/14 10:31:20 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/14 12:31:04 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list	*res;
-
-	res = ft_lstnew("hello, i'm a data", 18);
-	printf("\n1\n\n");
-	printf("%s\n%ld\n\n", (char*)res->content, res->content_size);
-	free(res->content);
-	printf("2\n\n");
-	free(res);
-	printf("3\n\n");
-	return (0);
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }
