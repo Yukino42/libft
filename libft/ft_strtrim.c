@@ -6,13 +6,13 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:02:03 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/03 16:22:45 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/13 11:29:47 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		trimlen(const char *s)
+static int	trimlen(const char *s)
 {
 	int		n1;
 	int		n2;
@@ -37,7 +37,7 @@ int		trimlen(const char *s)
 	return (n1 + 1);
 }
 
-char	*trimtest(const char *s, char *c, int n1)
+static char	*trimtest(const char *s, char *c, int n1)
 {
 	int		n2;
 	int		nb;
@@ -62,7 +62,7 @@ char	*trimtest(const char *s, char *c, int n1)
 	return (c);
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	char	*c;
 	int		n1;

@@ -6,14 +6,13 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 09:25:35 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/04 14:18:18 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/13 11:30:09 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	**mem1(char const *s, char c)
+static char	**mem1(char const *s, char c)
 {
 	char	**res;
 	int		n1;
@@ -30,16 +29,17 @@ char	**mem1(char const *s, char c)
 	if (n2 == 0)
 	{
 		res = (char**)malloc(1 * sizeof(*res));
-		*res = "\0";
+		res[0] = NULL;
 		return (res);
 	}
-	res = (char**)malloc(n2 * sizeof(*res));
+	else
+		res = (char**)malloc((n2 + 1) * sizeof(*res));
 	if (res == NULL)
 		return (NULL);
 	return (res);
 }
 
-char	*mem2(char const *s, char **res, char c)
+static char	*mem2(char const *s, char **res, char c)
 {
 	int		n1;
 	int		n3;
@@ -65,7 +65,7 @@ char	*mem2(char const *s, char **res, char c)
 	return ("ok");
 }
 
-char	**mem3(char const *s, char **res, char c)
+static char	**mem3(char const *s, char **res, char c)
 {
 	int		n1;
 	int		n3;
@@ -89,10 +89,11 @@ char	**mem3(char const *s, char **res, char c)
 		}
 		n1++;
 	}
+	res[n3] = NULL;
 	return (res);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**res;
 	int		n1;

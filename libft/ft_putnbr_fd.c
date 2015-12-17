@@ -6,7 +6,7 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 15:49:37 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/05 15:51:07 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/11 16:19:22 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char			c;
-	unsigned long	i;
+	long			i;
 
 	i = 1;
 	if (n < 0)

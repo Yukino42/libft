@@ -6,11 +6,9 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:41:39 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/02 14:35:39 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/07 09:30:22 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

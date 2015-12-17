@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 14:43:26 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/07 09:30:40 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/15 17:43:47 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/15 18:06:41 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	int		n;
+#include "libft.h"
 
-	n = 0;
-	while (s[n] != '\0')
+char	*ft_capitalize(char *str)
+{
+	int		a;
+	int		b;
+	int		c;
+
+	a = 0;
+	while (str[a] != '\0')
 	{
-		f(n, &s[n]);
-		n++;
+		b = 0;
+		c = 0;
+		b = ft_isalpha(str[a]);
+		c = ft_isalpha(str[a + 1]);
+		if ((b == 0) & (c == 1))
+			str[a + 1] = (char)ft_toupper((int)str[a + 1]);
+		a++;
 	}
+	return (str);
 }

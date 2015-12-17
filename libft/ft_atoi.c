@@ -6,7 +6,7 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 13:57:27 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:03 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/11 10:47:05 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_atoi(const char *str)
 	n = 0;
 	res = 0;
 	o = 0;
-	while (str[n] < '!')
+	while ((str[n] < '!') & (str[n] >= '\0'))
 		n++;
-	if (str[n] == '-')
+	if ((str[n] == '-') | (str[n] == '+'))
 	{
 		o = n;
 		n++;

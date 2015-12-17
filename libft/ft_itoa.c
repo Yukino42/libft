@@ -6,13 +6,13 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 14:40:11 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/04 17:28:34 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/13 11:29:07 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		itoa1(int n)
+static int	itoa1(int n)
 {
 	int		i;
 	int		j;
@@ -31,7 +31,7 @@ int		itoa1(int n)
 	return (i);
 }
 
-char	*itoa2(int i, int n)
+static char	*itoa2(int i, int n)
 {
 	char	*s;
 
@@ -43,7 +43,7 @@ char	*itoa2(int i, int n)
 	return (s);
 }
 
-char	*itoa3(int n, int i, char *s)
+static char	*itoa3(int n, int i, char *s)
 {
 	while (n != 0)
 	{
@@ -56,7 +56,7 @@ char	*itoa3(int n, int i, char *s)
 	return (s);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*s;
 	int		i;

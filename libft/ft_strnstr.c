@@ -6,13 +6,13 @@
 /*   By: rlemarch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 10:09:09 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/11/30 11:21:37 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/13 11:29:26 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*str2(const char *s1, const char *s2, size_t n, char *c)
+static char	*str2(const char *s1, const char *s2, size_t n, char *c)
 {
 	int		n2;
 	int		n3;
@@ -32,7 +32,7 @@ char	*str2(const char *s1, const char *s2, size_t n, char *c)
 	return (c);
 }
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	int		n1;
 	int		n2;

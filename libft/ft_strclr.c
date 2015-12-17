@@ -6,11 +6,9 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 11:20:40 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/02 11:35:29 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/07 09:29:41 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_strclr(char *s)
 {

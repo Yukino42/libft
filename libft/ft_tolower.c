@@ -6,11 +6,9 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:19:31 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/01 12:25:55 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/07 09:32:23 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

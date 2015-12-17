@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 14:43:26 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/07 09:30:40 by rlemarch         ###   ########.fr       */
+/*   Created: 2015/12/15 17:28:02 by rlemarch          #+#    #+#             */
+/*   Updated: 2015/12/16 09:58:57 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_isspace(int c)
 {
-	int		n;
-
-	n = 0;
-	while (s[n] != '\0')
-	{
-		f(n, &s[n]);
-		n++;
-	}
+	if ((c >= 0) & (c <= 32))
+		return (1);
+	else
+		return (0);
 }

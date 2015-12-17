@@ -6,11 +6,9 @@
 /*   By: rlemarch <rlemarch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:59:18 by rlemarch          #+#    #+#             */
-/*   Updated: 2015/12/02 16:17:17 by rlemarch         ###   ########.fr       */
+/*   Updated: 2015/12/07 09:30:05 by rlemarch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_strequ(char const *s1, char const *s2)
 {
